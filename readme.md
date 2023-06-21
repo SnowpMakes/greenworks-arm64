@@ -8,6 +8,10 @@ Feel free to add a PR for other alternatives. Again, [many projects](https://git
 
 ---
 
+# THIS REPO HAS BEEN MODIFIED TO COMPILE GREENWORKS FOR arm64 nw.js! NO OTHER PLATFORMS / FRAMEWORKS HAVE BEEN TESTED.
+
+---
+
 # Greenworks
 
 * Greenworks is a [node.js addon](https://nodejs.org/api/addons.html) that
@@ -23,7 +27,7 @@ Since then, it has been open-sourced and is
   * node v0.8, v0.10, v0.12, v4, v5, v6, v7, v8, v9 and v10
   * NW.js v0.8, v0.11+
   * Electron v1.0.0+
-  * Steam SDK v1.42 
+  * Steam SDK v1.43 
 * Greenworks is built using [Native Abstractions for Node.js](https://github.com/nodejs/nan) to
 support different node versions.
 * The project is currently funded by Greenheart Games and other

@@ -2,7 +2,7 @@
 
 ## Prerequisties
 
-* Steamworks SDK 1.41
+* Steamworks SDK 1.43
 * nodejs
 * nw-gyp
 
