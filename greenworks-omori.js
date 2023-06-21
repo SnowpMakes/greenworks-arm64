@@ -9,19 +9,21 @@ var greenworks;
 
 if (process.platform == 'darwin') {
   if (process.arch == 'x64')
-    greenworks = require(__dirname + '/lib/greenworks-osx64');
+    greenworks = require('./greenworks-osx64');
+  else if (process.arch == 'ia32')
+    greenworks = require('./greenworks-osx32');
   else if (process.arch == 'arm64')
-    greenworks = require(__dirname + "/lib/greenworks-osxarm64");
+    greenworks = require("./greenworks-osxarm64");
 } else if (process.platform == 'win32') {
   if (process.arch == 'x64')
-    greenworks = require(__dirname + '/lib/greenworks-win64');
+    greenworks = require('./greenworks-win64');
   else if (process.arch == 'ia32')
-    greenworks = require(__dirname + '/lib/greenworks-win32');
+    greenworks = require('./greenworks-win32');
 } else if (process.platform == 'linux') {
   if (process.arch == 'x64')
-    greenworks = require(__dirname + '/lib/greenworks-linux64');
+    greenworks = require('./greenworks-linux64');
   else if (process.arch == 'ia32')
-    greenworks = require(__dirname + '/lib/greenworks-linux32');
+    greenworks = require('./greenworks-linux32');
 }
 
 function error_process(err, error_callback) {
@@ -58,7 +60,7 @@ greenworks.ugcGetUserItems = function(options, ugc_matching_type,
       'page_num': 1
     }
   }
-  greenworks._ugcGetUserItems(options, ugc_matching_type, ugc_list_sort_order,
+  greenworks.ugcGetUserItems(options, ugc_matching_type, ugc_list_sort_order,
       ugc_list, success_callback, error_callback);
 }
 
