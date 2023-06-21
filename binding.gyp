@@ -43,10 +43,15 @@
             'project_name': 'greenworks-osx64',
           },
         }],
+        ['target_arch=="arm64"', {
+          'variables': {
+            'project_name': 'greenworks-osxarm64',
+          },
+        }],
       ],
       'variables': {
-        'redist_bin_dir': 'osx32',
-        'public_lib_dir': 'osx32',
+        'redist_bin_dir': 'osx',
+        'public_lib_dir': 'osx',
         'lib_steam': 'libsteam_api.dylib',
         'lib_encryptedappticket': 'libsdkencryptedappticket.dylib',
       },
@@ -132,7 +137,7 @@
           }],
         ],
       },
-      'cflags': [ '-std=c++14' ],
+      'cflags': [ '-std=c++17' ],
       'conditions': [
         ['OS== "linux"',
           {
@@ -168,7 +173,7 @@
           '-Wno-deprecated-declarations',
         ],
         'OTHER_CPLUSPLUSFLAGS' : [
-          '-std=c++14',
+          '-std=c++17',
           '-stdlib=libc++'
         ],
         'OTHER_LDFLAGS': [
